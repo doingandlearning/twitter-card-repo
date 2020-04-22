@@ -1,2 +1,3 @@
 install:
-	echo "installed"
+	cd functions/gen-opengraph-image && npm i
+	
