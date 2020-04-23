@@ -22,6 +22,13 @@ exports.handler = async function (event, ctx) {
     </body>
   </html>
   `);
+  await page.addScriptTag({
+    content: `
+    window.title = "This is a test title"
+    window.tags = ["test", "test2","test3]
+    window.author = "@dolearning"
+  `,
+  });
   await page.addScriptTag({ content: script });
   const boundingRect = await page.evaluate(() => {
     const dolearning = document.getElementById("dolearning");

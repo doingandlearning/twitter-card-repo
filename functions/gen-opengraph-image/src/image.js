@@ -61,7 +61,7 @@ export default function Image() {
               lineHeight: 1,
             }}
           >
-            How to make use of API Routes in NextJS
+            {window.title}
           </Textfit>
         </h1>
         <div
@@ -85,10 +85,11 @@ export default function Image() {
               fontSize: 40,
             }}
           >
-            <li>react</li>
-            <li>next</li>
+            {window.tags.map((item) => (
+              <li>{item}</li>
+            ))}
           </ul>
-          <span css={{ fontSize: 40 }}>@dolearning</span>
+          <span css={{ fontSize: 40 }}>{window.author}</span>
         </div>
       </div>
     </div>
