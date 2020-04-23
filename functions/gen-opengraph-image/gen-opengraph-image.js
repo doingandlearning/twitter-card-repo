@@ -30,7 +30,7 @@ exports.handler = async function (event, ctx) {
     content: `
   window.title = "${queryStringParameters.title || "No Title"}";
   window.tags = ${JSON.stringify(tags)};
-  window.author = "${queryStringParameters.author || ""}";
+  window.author = "@dolearning";
   `,
   });
   await page.addScriptTag({ content: script });
