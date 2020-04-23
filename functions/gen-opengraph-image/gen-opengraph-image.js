@@ -15,8 +15,13 @@ exports.handler = async function (event, ctx) {
   </html>
   `);
   const boundingRect = await page.evaluate(() => {
-    const corgi = document.getElementById("corgi");
-    const { x, y, width, height } = corgi.children[0].getBoundingClientRect();
+    const dolearning = document.getElementById("dolearning");
+    const {
+      x,
+      y,
+      width,
+      height,
+    } = dolearning.children[0].getBoundingClientRect();
     return { x, y, width, height };
   });
   const screenshotBuffer = await page.screenshot({ clip: boundingRect });
