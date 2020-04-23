@@ -1,8 +1,12 @@
 const playwright = require("playwright-aws-lambda");
+const fs = require("fs");
+const script = fs.readFileSync("./image.js", "utf-8");
+
 exports.handler = async function (event, ctx) {
   const browser = await playwright.launchChromium();
   const context = await browser._defaultContext;
   const page = await context.newPage();
+
   await page.setContent(`<!DOCTYPE html>
   <html>
     <head>
@@ -10,10 +14,11 @@ exports.handler = async function (event, ctx) {
     </head>
   
     <body>
-      <div id="dolearning"><div>DOLEARNING</div></div>
+      <div id="dolearning"><div>Dolearning</div></div>
     </body>
   </html>
   `);
+  await page.addScriptTag({ content: script });
   const boundingRect = await page.evaluate(() => {
     const dolearning = document.getElementById("dolearning");
     const {

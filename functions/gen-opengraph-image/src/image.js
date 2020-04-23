@@ -1,8 +1,9 @@
 /** @jsx jsx */
 import { jsx, Global } from "@emotion/core";
 import Textfit from "react-textfit";
+import { render } from "react-dom";
 
-export default function App() {
+export default function Image() {
   return (
     <div
       css={{
@@ -12,7 +13,7 @@ export default function App() {
           "radial-gradient(circle at 69% 75%, hsla(65,0%,95%,0.05) 0%, hsla(65,0%,95%,0.05) 38%,transparent 38%, transparent 69%,transparent 69%, transparent 100%),radial-gradient(circle at 41% 58%, hsla(65,0%,95%,0.05) 0%, hsla(65,0%,95%,0.05) 3%,transparent 3%, transparent 75%,transparent 75%, transparent 100%),radial-gradient(circle at 94% 91%, hsla(65,0%,95%,0.05) 0%, hsla(65,0%,95%,0.05) 48%,transparent 48%, transparent 55%,transparent 55%, transparent 100%),radial-gradient(circle at 68% 38%, hsla(65,0%,95%,0.05) 0%, hsla(65,0%,95%,0.05) 34%,transparent 34%, transparent 36%,transparent 36%, transparent 100%),radial-gradient(circle at 81% 20%, hsla(65,0%,95%,0.05) 0%, hsla(65,0%,95%,0.05) 40%,transparent 40%, transparent 61%,transparent 61%, transparent 100%),radial-gradient(circle at 46% 37%, hsla(65,0%,95%,0.05) 0%, hsla(65,0%,95%,0.05) 37%,transparent 37%, transparent 76%,transparent 76%, transparent 100%),radial-gradient(circle at 49% 5%, hsla(65,0%,95%,0.05) 0%, hsla(65,0%,95%,0.05) 43%,transparent 43%, transparent 67%,transparent 67%, transparent 100%),radial-gradient(circle at 18% 58%, hsla(65,0%,95%,0.05) 0%, hsla(65,0%,95%,0.05) 4%,transparent 4%, transparent 20%,transparent 20%, transparent 100%),radial-gradient(circle at 43% 68%, hsla(65,0%,95%,0.05) 0%, hsla(65,0%,95%,0.05) 10%,transparent 10%, transparent 36%,transparent 36%, transparent 100%),linear-gradient(135deg, rgb(85, 133, 238),rgb(177, 145, 214));",
         position: "absolute",
         display: "flex",
-        overflow: "hidden"
+        overflow: "hidden",
       }}
     >
       <Global
@@ -21,8 +22,8 @@ export default function App() {
             boxSizing: "border-box",
             margin: 0,
             padding: 0,
-            fontFamily: "helvetica"
-          }
+            fontFamily: "helvetica",
+          },
         }}
       />
       <div
@@ -41,14 +42,14 @@ export default function App() {
   0 12.5px 10px rgba(0, 0, 0, 0.035),
   0 22.3px 17.9px rgba(0, 0, 0, 0.042),
   0 41.8px 33.4px rgba(0, 0, 0, 0.05),
-  0 100px 80px rgba(0, 0, 0, 0.07)`
+  0 100px 80px rgba(0, 0, 0, 0.07)`,
         }}
       >
         <h1
           css={{
             color: "#EBECFA",
             height: "100%",
-            textAlign: "left"
+            textAlign: "left",
           }}
         >
           <Textfit
@@ -57,7 +58,7 @@ export default function App() {
             style={{
               minHeight: "80%",
               maxHeight: "80%",
-              lineHeight: 1
+              lineHeight: 1,
             }}
           >
             How to make use of API Routes in NextJS
@@ -67,7 +68,7 @@ export default function App() {
           css={{
             color: "#EBECFA",
             display: "flex",
-            justifyContent: "space-between"
+            justifyContent: "space-between",
           }}
         >
           <ul
@@ -78,10 +79,10 @@ export default function App() {
                 marginRight: ".5rem",
                 "&:not(:last-child):after": {
                   content: "'-'",
-                  marginLeft: ".5rem"
-                }
+                  marginLeft: ".5rem",
+                },
               },
-              fontSize: 40
+              fontSize: 40,
             }}
           >
             <li>react</li>
@@ -93,3 +94,5 @@ export default function App() {
     </div>
   );
 }
+
+render(<Image />, document.getElementById("dolearning"));
