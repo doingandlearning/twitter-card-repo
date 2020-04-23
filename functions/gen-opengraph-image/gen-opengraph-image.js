@@ -6,7 +6,7 @@ exports.handler = async function (event, ctx) {
   const browser = await playwright.launchChromium();
   const context = await browser._defaultContext;
   const page = await context.newPage();
-  page.ViewportSize({
+  page.setViewportSize({
     width: 1200,
     height: 630,
   });
