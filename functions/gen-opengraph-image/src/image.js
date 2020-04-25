@@ -2,7 +2,7 @@
 import { jsx, Global } from "@emotion/core";
 import ScaleText from "react-scale-text";
 import { render } from "react-dom";
-import Brain from "./brain.jpg";
+// import Brain from "./brain.jpg";
 
 export default function Image() {
   return (
@@ -54,8 +54,8 @@ export default function Image() {
           }}
         >
           <div>
-            <img
-              src={Brain}
+            {/* <img
+              src={}
               alt="Running brain"
               css={{
                 width: 350,
@@ -64,7 +64,7 @@ export default function Image() {
                 marginTop: "40px",
                 marginLeft: "36px",
               }}
-            />
+            /> */}
           </div>
           <h1
             css={{
