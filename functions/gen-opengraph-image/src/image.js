@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Global } from "@emotion/core";
-import Textfit from "react-textfit";
+import ScaleText from "react-scale-text";
 import { render } from "react-dom";
 
 export default function Image() {
@@ -48,21 +48,14 @@ export default function Image() {
         <h1
           css={{
             color: "#EBECFA",
-            height: "100%",
+            height: "80%",
             textAlign: "left",
+            lineHeight: 1,
           }}
         >
-          <Textfit
-            max={256}
-            min={24}
-            style={{
-              minHeight: "80%",
-              maxHeight: "80%",
-              lineHeight: 1,
-            }}
-          >
+          <ScaleText minFontSize={24} maxFontSize={256}>
             {window.title}
-          </Textfit>
+          </ScaleText>
         </h1>
         <div
           css={{
