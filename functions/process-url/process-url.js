@@ -9,9 +9,7 @@ cloudinary.config({
 exports.handler = async function (event, ctx) {
   const { queryStringParameters } = event;
   try {
-    const imageUrl = `https://res.cloudinary.com/${
-      process.env.CLOUD_NAME
-    }/image/fetch/${encodeURIComponent(
+    const imageUrl = `https://res.cloudinary.com/kc-cloud/image/fetch/${encodeURIComponent(
       `https://hungry-brattain-538c0b.netlify.app/.netlify/functions/gen-opengraph-image?${qs.stringify(
         queryStringParameters
       )}`
