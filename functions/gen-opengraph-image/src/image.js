@@ -46,23 +46,16 @@ export default function Image() {
   0 100px 80px rgba(0, 0, 0, 0.07)`,
         }}
       >
-        <div
-          css={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
-            height: "100%",
-          }}
-        >
+        <div css={{ height: "100%", display: "flex" }}>
           <img
             src={Brain}
             alt="Running brain"
             css={{
               width: 350,
-              clipPath: "ellipse(40% 40% at 50% 50%)",
+              clipPath: "circle(40%)",
               transform: "scaleX(-1)",
-              marginTop: "40px",
-              marginLeft: "36px",
+              display: "inline",
+              marginRight: "20px",
             }}
           />
           <h1
@@ -74,12 +67,13 @@ export default function Image() {
           >
             <Textfit
               max={256}
-              min={24}
+              min={48}
               style={{
                 minHeight: "80%",
                 maxHeight: "80%",
                 lineHeight: 1,
               }}
+              throttle={2000}
             >
               {window.title}
             </Textfit>
