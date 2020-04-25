@@ -1,10 +1,20 @@
 /** @jsx jsx */
 import { jsx, Global } from "@emotion/core";
-import Textfit from "react-textfit";
 import { render } from "react-dom";
 import Brain from "./brain.jpg";
 
 export default function Image() {
+  const length = window.title.length;
+  const fontSizes = [
+    { min: "0", max: "20", size: "150px" },
+    { min: "20", max: "40", size: "105px" },
+    { min: "40", max: "60", size: "95px" },
+    { min: "60", max: "80", size: "80px" },
+    { min: "80", max: "100", size: "70px" },
+  ];
+  const relSize = fontSizes.filter(
+    (item) => item.min < length && item.max > length
+  );
   return (
     <div
       css={{
@@ -54,7 +64,6 @@ export default function Image() {
               width: 350,
               clipPath: "circle(40%)",
               transform: "scaleX(-1)",
-              display: "inline",
               marginRight: "20px",
             }}
           />
@@ -63,20 +72,10 @@ export default function Image() {
               color: "#EBECFA",
               height: "100%",
               textAlign: "left",
+              fontSize: relSize[0].size,
             }}
           >
-            <Textfit
-              max={256}
-              min={48}
-              style={{
-                minHeight: "80%",
-                maxHeight: "80%",
-                lineHeight: 1,
-              }}
-              throttle={2000}
-            >
-              {window.title}
-            </Textfit>
+            {window.title}
           </h1>
         </div>
         <div
