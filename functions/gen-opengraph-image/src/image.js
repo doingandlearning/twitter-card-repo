@@ -2,6 +2,7 @@
 import { jsx, Global } from "@emotion/core";
 import Textfit from "react-textfit";
 import { render } from "react-dom";
+import Brain from "./brain.jpg";
 
 export default function Image() {
   return (
@@ -45,25 +46,45 @@ export default function Image() {
   0 100px 80px rgba(0, 0, 0, 0.07)`,
         }}
       >
-        <h1
+        <div
           css={{
-            color: "#EBECFA",
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
             height: "100%",
-            textAlign: "left",
           }}
         >
-          <Textfit
-            max={256}
-            min={24}
-            style={{
-              minHeight: "80%",
-              maxHeight: "80%",
-              lineHeight: 1,
+          <img
+            src={Brain}
+            alt="Running brain"
+            css={{
+              width: 350,
+              borderRadius: "50%",
+              transform: "scaleX(-1)",
+              marginTop: "40px",
+              marginLeft: "36px",
+            }}
+          />
+          <h1
+            css={{
+              color: "#EBECFA",
+              height: "100%",
+              textAlign: "left",
             }}
           >
-            {window.title}
-          </Textfit>
-        </h1>
+            <Textfit
+              max={256}
+              min={24}
+              style={{
+                minHeight: "80%",
+                maxHeight: "80%",
+                lineHeight: 1,
+              }}
+            >
+              {window.title}
+            </Textfit>
+          </h1>
+        </div>
         <div
           css={{
             color: "#EBECFA",
