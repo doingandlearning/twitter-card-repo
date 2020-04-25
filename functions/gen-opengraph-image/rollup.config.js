@@ -20,7 +20,7 @@ const config = {
     resolve({
       preferBuiltins: true,
     }),
-    image(),
+
     babel({
       exclude: "node_modules/**",
     }),
