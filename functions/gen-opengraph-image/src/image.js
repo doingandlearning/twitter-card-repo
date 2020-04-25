@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Global } from "@emotion/core";
-import ScaleText from "react-scale-text";
+import Textfit from "react-textfit";
 import { render } from "react-dom";
 
 export default function Image() {
@@ -48,14 +48,21 @@ export default function Image() {
         <h1
           css={{
             color: "#EBECFA",
+            height: "100%",
             textAlign: "left",
-            marginLeft: "20px",
-            height: "80%",
           }}
         >
-          <ScaleText minFontSize={24} maxFontSize={256}>
-            How to make use of API Routes in NextJS
-          </ScaleText>
+          <Textfit
+            max={256}
+            min={24}
+            style={{
+              minHeight: "80%",
+              maxHeight: "80%",
+              lineHeight: 1,
+            }}
+          >
+            {window.title}
+          </Textfit>
         </h1>
         <div
           css={{
