@@ -48,37 +48,16 @@ export default function Image() {
       >
         <div
           css={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
+            color: "#EBECFA",
+            textAlign: "left",
+            marginLeft: "20px",
+            height: "80%",
           }}
         >
-          <div>
-            {/* <img
-              src={}
-              alt="Running brain"
-              css={{
-                width: 350,
-                borderRadius: "50%",
-                transform: "scaleX(-1)",
-                marginTop: "40px",
-                marginLeft: "36px",
-              }}
-            /> */}
-          </div>
-          <h1
-            css={{
-              color: "#EBECFA",
-              height: "80%",
-              textAlign: "left",
-              marginLeft: "20px",
-            }}
-          >
-            <ScaleText minFontSize={24} maxFontSize={256}>
-              {window.title}
-            </ScaleText>
-          </h1>
-        </div>
+          <ScaleText minFontSize={24} maxFontSize={256}>
+            How to make use of API Routes in NextJS
+          </ScaleText>
+        </h1>
         <div
           css={{
             color: "#EBECFA",
