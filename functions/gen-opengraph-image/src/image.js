@@ -54,7 +54,7 @@ export default function Image() {
         >
           <div>
             <img
-              src="https://res.cloudinary.com/kc-cloud/image/upload/v1587825918/twitter_6thbhTi2_ygwdgi.jpg"
+              src="./brain.jpg"
               alt="Running brain"
               css={{
                 width: 350,
