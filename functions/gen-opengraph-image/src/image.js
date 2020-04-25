@@ -59,7 +59,7 @@ export default function Image() {
             alt="Running brain"
             css={{
               width: 350,
-              borderRadius: "50%",
+              clipPath: "ellipse(40% 40% at 50% 50%)",
               transform: "scaleX(-1)",
               marginTop: "40px",
               marginLeft: "36px",
