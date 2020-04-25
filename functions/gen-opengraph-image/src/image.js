@@ -2,6 +2,7 @@
 import { jsx, Global } from "@emotion/core";
 import Textfit from "react-textfit";
 import { render } from "react-dom";
+import Brain from "./brain.jpg";
 
 export default function Image() {
   return (
@@ -54,7 +55,7 @@ export default function Image() {
         >
           <div>
             <img
-              src="./brain.jpg"
+              src={Brain}
               alt="Running brain"
               css={{
                 width: 350,
