@@ -68,7 +68,7 @@ export default function Image() {
             }}
           >
             <p css={{ fontSize }}>{window.title}</p>
-          </h1>
+          </div>
         </div>
         <div
           css={{
