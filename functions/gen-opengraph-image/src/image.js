@@ -2,19 +2,10 @@
 import { jsx, Global } from "@emotion/core";
 import { render } from "react-dom";
 import Brain from "./brain.jpg";
+import { useFitText } from "./use-fit-text";
 
 export default function Image() {
-  const length = window.title.length;
-  const fontSizes = [
-    { min: "0", max: "20", size: "150px" },
-    { min: "20", max: "40", size: "105px" },
-    { min: "40", max: "60", size: "95px" },
-    { min: "60", max: "80", size: "80px" },
-    { min: "80", max: "100", size: "70px" },
-  ];
-  const relSize = fontSizes.filter(
-    (item) => item.min < length && item.max > length
-  );
+  const { fontSize, ref } = useFitText();
   return (
     <div
       css={{
@@ -67,15 +58,16 @@ export default function Image() {
               marginRight: "20px",
             }}
           />
-          <h1
+          <div
+            ref={ref}
             css={{
               color: "#EBECFA",
               height: "100%",
+              width: "100%",
               textAlign: "left",
-              fontSize: relSize[0].size,
             }}
           >
-            {window.title}
+            <p css={{ fontSize }}>{window.title}</p>
           </h1>
         </div>
         <div
